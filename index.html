@@ -22,9 +22,7 @@
             max-width: 1000px;
             margin: auto;
         }
-        h1 {
-            margin: 0;
-        }
+        h1 { margin: 0; }
         .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -49,7 +47,6 @@
             text-align: center;
             font-size: 14px;
         }
-        /* Modal styles */
         .modal {
             display: none;
             position: fixed;
@@ -68,18 +65,20 @@
             max-width: 90%;
             max-height: 90%;
         }
-        .close {
+        .close, .prev, .next {
             position: absolute;
-            top: 30px;
-            right: 50px;
+            top: 50%;
+            transform: translateY(-50%);
             color: #fff;
             font-size: 40px;
             font-weight: bold;
             cursor: pointer;
+            padding: 0 20px;
         }
-        .close:hover {
-            color: #ccc;
-        }
+        .close { top: 30px; right: 50px; transform: none; }
+        .prev { left: 0; }
+        .next { right: 0; }
+        .close:hover, .prev:hover, .next:hover { color: #ccc; }
     </style>
 </head>
 <body>
@@ -87,11 +86,10 @@
         <h1>Nuomojamas 4 vietų prikabinamas namelis</h1>
     </header>
     <div class="container">
-        <p>
-            Su dujiniu/elektriniu (230V) šildymu, kondicionieriumi, šaldytuvu (12V/230V/dujos), dujine virykle su orkaite,
-            dušu, WC, indais, kapsuliniu kavos aparatu, lauko staliuku su kėdutėmis, 80 l švaraus vandens baku,
-            nuotekų talpa, pneumatiniu rato pakėlimu. Nuomojama su visa patalyne.
-        </p>
+        <p>Su dujiniu/elektriniu (230V) šildymu, kondicionieriumi, šaldytuvu (12V/230V/dujos), dujine virykle su orkaite, dušu (su šiltu vandeniu – ruošiamas dujų pagalba, nereikia jungtis prie elektros), WC, indais, kapsuliniu kavos aparatu (veikia nuo namelio akumuliatoriaus – elektros šaltinis nereikalingas), lauko staliuku su kėdutėmis, 80 l švaraus vandens baku, nuotekų talpa (švaraus vandens bakas pateikiamas pilnas. Nereikės rūpintis jo pildymu ir nuotekų šalinimu), pneumatiniu rato pakėlimu.
+
+Norite atsikėlę prie ežero mėgautis kava net be elektros? Jokių problemų – be kapsulinio aparato galite naudotis ir klasikiniu kavinuku („moka pot“), kuris kavą paruoš net ir paprastoje dujinėje viryklėje.
+</p>
         <p><strong>Kainos:</strong><br>
             Užstatas: 200 €<br>
             Darbo diena: 30 €<br>
@@ -105,43 +103,45 @@
             El. paštas: info@paslaugele.lt
         </p>
         <div class="gallery">
-            <img src="photos/20250712_171516.jpg" alt="20250712_171516.jpg" onclick="openModal(this.src)">
-            <img src="photos/20250712_171534.jpg" alt="20250712_171534.jpg" onclick="openModal(this.src)">
-            <img src="photos/20250717_183307.jpg" alt="20250717_183307.jpg" onclick="openModal(this.src)">
-            <img src="photos/20250717_200708.jpg" alt="20250717_200708.jpg" onclick="openModal(this.src)">
-            <img src="photos/20250717_200720.jpg" alt="20250717_200720.jpg" onclick="openModal(this.src)">
-            <img src="photos/20250717_200737.jpg" alt="20250717_200737.jpg" onclick="openModal(this.src)">
-            <img src="photos/20250717_200743.jpg" alt="20250717_200743.jpg" onclick="openModal(this.src)">
-            <img src="photos/20250717_200807.jpg" alt="20250717_200807.jpg" onclick="openModal(this.src)">
-            <img src="photos/20250717_200821.jpg" alt="20250717_200821.jpg" onclick="openModal(this.src)">
-            <img src="photos/20250717_200901.jpg" alt="20250717_200901.jpg" onclick="openModal(this.src)">
-            <img src="photos/20250717_200915.jpg" alt="20250717_200915.jpg" onclick="openModal(this.src)">
-            <img src="photos/20250717_200950.jpg" alt="20250717_200950.jpg" onclick="openModal(this.src)">
-            <img src="photos/20250717_201013.jpg" alt="20250717_201013.jpg" onclick="openModal(this.src)">
-            <img src="photos/20250717_201022.jpg" alt="20250717_201022.jpg" onclick="openModal(this.src)">
-            <img src="photos/20250717_201117.jpg" alt="20250717_201117.jpg" onclick="openModal(this.src)">
-            <img src="photos/20250717_201233.jpg" alt="20250717_201233.jpg" onclick="openModal(this.src)">
-            <img src="photos/20250717_201306.jpg" alt="20250717_201306.jpg" onclick="openModal(this.src)">
-            <img src="photos/20250717_201313.jpg" alt="20250717_201313.jpg" onclick="openModal(this.src)">
-            <img src="photos/20250717_202200.jpg" alt="20250717_202200.jpg" onclick="openModal(this.src)">
-            <img src="photos/20250717_202629.jpg" alt="20250717_202629.jpg" onclick="openModal(this.src)">
-            <img src="photos/20250717_203713.jpg" alt="20250717_203713.jpg" onclick="openModal(this.src)">
-            <img src="photos/20250717_203756.jpg" alt="20250717_203756.jpg" onclick="openModal(this.src)">
-            <img src="photos/20250717_203835.jpg" alt="20250717_203835.jpg" onclick="openModal(this.src)">
-            <img src="photos/20250717_204337.jpg" alt="20250717_204337.jpg" onclick="openModal(this.src)">
-            <img src="photos/20250719_144324.jpg" alt="20250719_144324.jpg" onclick="openModal(this.src)">
-            <img src="photos/20250719_144338.jpg" alt="20250719_144338.jpg" onclick="openModal(this.src)">
-            <img src="photos/20250719_165924.jpg" alt="20250719_165924.jpg" onclick="openModal(this.src)">
-            <img src="photos/20250719_172206.jpg" alt="20250719_172206.jpg" onclick="openModal(this.src)">
-            <img src="photos/20250720_141644.jpg" alt="20250720_141644.jpg" onclick="openModal(this.src)">
-            <img src="photos/20250725_211138.jpg" alt="20250725_211138.jpg" onclick="openModal(this.src)">
+            <img src="photos/20250712_171516.jpg" alt="20250712_171516.jpg" onclick="openModal(0)">
+            <img src="photos/20250712_171534.jpg" alt="20250712_171534.jpg" onclick="openModal(1)">
+            <img src="photos/20250717_183307.jpg" alt="20250717_183307.jpg" onclick="openModal(2)">
+            <img src="photos/20250717_200708.jpg" alt="20250717_200708.jpg" onclick="openModal(3)">
+            <img src="photos/20250717_200720.jpg" alt="20250717_200720.jpg" onclick="openModal(4)">
+            <img src="photos/20250717_200737.jpg" alt="20250717_200737.jpg" onclick="openModal(5)">
+            <img src="photos/20250717_200743.jpg" alt="20250717_200743.jpg" onclick="openModal(6)">
+            <img src="photos/20250717_200807.jpg" alt="20250717_200807.jpg" onclick="openModal(7)">
+            <img src="photos/20250717_200821.jpg" alt="20250717_200821.jpg" onclick="openModal(8)">
+            <img src="photos/20250717_200901.jpg" alt="20250717_200901.jpg" onclick="openModal(9)">
+            <img src="photos/20250717_200915.jpg" alt="20250717_200915.jpg" onclick="openModal(10)">
+            <img src="photos/20250717_200950.jpg" alt="20250717_200950.jpg" onclick="openModal(11)">
+            <img src="photos/20250717_201013.jpg" alt="20250717_201013.jpg" onclick="openModal(12)">
+            <img src="photos/20250717_201022.jpg" alt="20250717_201022.jpg" onclick="openModal(13)">
+            <img src="photos/20250717_201117.jpg" alt="20250717_201117.jpg" onclick="openModal(14)">
+            <img src="photos/20250717_201233.jpg" alt="20250717_201233.jpg" onclick="openModal(15)">
+            <img src="photos/20250717_201306.jpg" alt="20250717_201306.jpg" onclick="openModal(16)">
+            <img src="photos/20250717_201313.jpg" alt="20250717_201313.jpg" onclick="openModal(17)">
+            <img src="photos/20250717_202200.jpg" alt="20250717_202200.jpg" onclick="openModal(18)">
+            <img src="photos/20250717_202629.jpg" alt="20250717_202629.jpg" onclick="openModal(19)">
+            <img src="photos/20250717_203713.jpg" alt="20250717_203713.jpg" onclick="openModal(20)">
+            <img src="photos/20250717_203756.jpg" alt="20250717_203756.jpg" onclick="openModal(21)">
+            <img src="photos/20250717_203835.jpg" alt="20250717_203835.jpg" onclick="openModal(22)">
+            <img src="photos/20250717_204337.jpg" alt="20250717_204337.jpg" onclick="openModal(23)">
+            <img src="photos/20250719_144324.jpg" alt="20250719_144324.jpg" onclick="openModal(24)">
+            <img src="photos/20250719_144338.jpg" alt="20250719_144338.jpg" onclick="openModal(25)">
+            <img src="photos/20250719_165924.jpg" alt="20250719_165924.jpg" onclick="openModal(26)">
+            <img src="photos/20250719_172206.jpg" alt="20250719_172206.jpg" onclick="openModal(27)">
+            <img src="photos/20250720_141644.jpg" alt="20250720_141644.jpg" onclick="openModal(28)">
+            <img src="photos/20250725_211138.jpg" alt="20250725_211138.jpg" onclick="openModal(29)">
 
         </div>
     </div>
 
-    <div id="modal" class="modal" onclick="closeModal()">
+    <div id="modal" class="modal">
         <span class="close" onclick="closeModal()">&times;</span>
+        <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
         <img class="modal-content" id="modal-img">
+        <span class="next" onclick="changeSlide(1)">&#10095;</span>
     </div>
 
     <footer>
@@ -149,14 +149,55 @@
     </footer>
 
     <script>
-        function openModal(src) {
-            var modal = document.getElementById("modal");
-            var modalImg = document.getElementById("modal-img");
+        const images = [
+"photos/20250712_171516.jpg",
+"photos/20250712_171534.jpg",
+"photos/20250717_183307.jpg",
+"photos/20250717_200708.jpg",
+"photos/20250717_200720.jpg",
+"photos/20250717_200737.jpg",
+"photos/20250717_200743.jpg",
+"photos/20250717_200807.jpg",
+"photos/20250717_200821.jpg",
+"photos/20250717_200901.jpg",
+"photos/20250717_200915.jpg",
+"photos/20250717_200950.jpg",
+"photos/20250717_201013.jpg",
+"photos/20250717_201022.jpg",
+"photos/20250717_201117.jpg",
+"photos/20250717_201233.jpg",
+"photos/20250717_201306.jpg",
+"photos/20250717_201313.jpg",
+"photos/20250717_202200.jpg",
+"photos/20250717_202629.jpg",
+"photos/20250717_203713.jpg",
+"photos/20250717_203756.jpg",
+"photos/20250717_203835.jpg",
+"photos/20250717_204337.jpg",
+"photos/20250719_144324.jpg",
+"photos/20250719_144338.jpg",
+"photos/20250719_165924.jpg",
+"photos/20250719_172206.jpg",
+"photos/20250720_141644.jpg",
+"photos/20250725_211138.jpg"
+        ];
+        let currentIndex = 0;
+        const modal = document.getElementById("modal");
+        const modalImg = document.getElementById("modal-img");
+
+        function openModal(index) {
+            currentIndex = index;
             modal.style.display = "block";
-            modalImg.src = src;
+            modalImg.src = images[currentIndex];
         }
         function closeModal() {
-            document.getElementById("modal").style.display = "none";
+            modal.style.display = "none";
+        }
+        function changeSlide(direction) {
+            currentIndex += direction;
+            if (currentIndex < 0) currentIndex = images.length - 1;
+            if (currentIndex >= images.length) currentIndex = 0;
+            modalImg.src = images[currentIndex];
         }
     </script>
 </body>
